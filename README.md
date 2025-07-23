@@ -1,4 +1,4 @@
-# 🚀 Onboarding Tracker
+# 🚀 Onboard MAte
 
 An easy-to-use onboarding management system for HR teams to assign tasks and track new employees during their onboarding journey.
 
