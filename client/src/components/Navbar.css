@@ -1,0 +1,112 @@
+/* Navbar Container */
+.navbar {
+  background-color: #7E1946;
+  color: #FBFEF9;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Navbar Layout */
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__left h2 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #FBFEF9;
+  letter-spacing: 1.5px;
+}
+
+/* Links (center) */
+.navbar__center a {
+  color: #FBFEF9;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.navbar__center a:hover {
+  color: #000004;
+  border-bottom: 2px solid #A63446;
+}
+
+/* Buttons and links (right) */
+.navbar__right {
+  position: relative;
+}
+
+.navbar__right button,
+.navbar__right a {
+  background-color: #0C6291;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  color: #FBFEF9;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar__right button:hover,
+.navbar__right a:hover {
+  background-color: #A63446;
+}
+
+/* === Login Dropdown (Popover) === */
+.login-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background-color: #FBFEF9;
+  border: 2px solid #A63446;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  min-width: 180px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Buttons inside dropdown */
+.login-dropdown button {
+  background-color: transparent;
+  border: none;
+  color: #7E1946;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  text-align: left;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.login-dropdown button:hover {
+  background-color: #0C6291;
+  color: #FBFEF9;
+}
+
+/* Fade-in dropdown */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

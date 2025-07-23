@@ -1,0 +1,113 @@
+.modal-backdrop-assign {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(22, 24, 41, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  animation: fadeInBG 0.35s;
+}
+
+@keyframes fadeInBG {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+/* Glass effect card */
+.assign-modal-glass {
+  background: rgba(251, 254, 249, 0.95);
+  border-radius: 22px;
+  box-shadow: 0 8px 48px #7E194655, 0 1.5px 4px #0C629149;
+  padding: 2.2rem 2.8rem 2.1rem 2.8rem;
+  min-width: 340px;
+  max-width: 94vw;
+  border: 2px solid #A63446;
+  /* Frosted glass effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  animation: popInAssign 0.38s cubic-bezier(.47,1.45,.45,.99);
+}
+
+@keyframes popInAssign {
+  0%   { opacity: 0; transform: translateY(60px) scale(0.94);}
+  70%  { opacity: 1; transform: translateY(-8px) scale(1.03);}
+  100% { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+.assign-modal-glass h2 {
+  color: #7E1946;
+  text-align: center;
+  font-size: 1.35rem;
+  margin-bottom: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.assign-modal-glass input,
+.assign-modal-glass textarea {
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 1.1rem;
+  padding: 0.87rem 1.08rem;
+  border: 1.6px solid #0C6291;
+  background: #fafbfd;
+  border-radius: 9px;
+  color: #22223b;
+  transition: border-color .2s;
+  font-family: inherit;
+}
+.assign-modal-glass input:focus,
+.assign-modal-glass textarea:focus {
+  border-color: #A63446;
+  outline: none;
+}
+
+/* Actions row with space */
+.assign-modal-actions {
+  display: flex;
+  gap: 1.05rem;
+  justify-content: flex-end;
+  margin-top: 1.3rem;
+}
+
+.assign-btn-main {
+  background: linear-gradient(90deg, #7E1946 20%, #A63446 90%);
+  color: #FBFEF9;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 2.2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background .18s, transform .13s;
+}
+.assign-btn-main:hover {
+  background: linear-gradient(90deg, #A63446 20%, #7E1946 90%);
+  transform: scale(1.06);
+}
+
+.assign-cancel-btn {
+  background: transparent;
+  color: #A63446;
+  padding: 0.67rem 1.1rem;
+  border-radius: 8px;
+  border: 1.2px solid #A63446;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .14s, color .14s;
+}
+.assign-cancel-btn:hover {
+  background: #FDF1F5;
+  color: #7E1946;
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .assign-modal-glass {
+    padding: 1.3rem 0.4rem;
+    min-width: unset;
+  }
+}
